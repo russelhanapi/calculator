@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 300px;
+  padding: 22px;
+  margin: 100px auto;
+  background-color: black;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input {
+  border: none;
+  border-radius: 6px;
+  text-align: right;
+  padding: 22px;
+  font-size: 50px;
+}
+
+.keypad-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.btn {
+  padding: 18px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.btn:hover {
+  background-color: rgb(172, 172, 172);
+}
+.btn-operator {
+  background-color: orange;
+  color: white;
+}
+.btn-operator:hover {
+  background-color: rgb(190, 124, 1);
+}
+
+.btn-clear {
+  background-color: red;
+  color: white;
+}
+.btn-clear:hover {
+  background-color: rgb(190, 0, 0);
+}
