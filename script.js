@@ -63,3 +63,10 @@ btnOperatorsEl.forEach((btn) =>
 );
 
 btnEqualsEl.addEventListener('click', handleCalculation);
+
+btnClearEl.addEventListener('click', function () {
+  currentValue = '';
+  previousValue = '';
+  operator = '';
+  inputField.value = '0';
+});
