@@ -17,9 +17,19 @@ const operate = (operator, num1, num2) => {
   return Math.round((operations[operator]?.(num1, num2) || '') * 1000) / 1000;
 };
 
+let currentValue = '';
+let previousValue = '';
+let operator = '';
+
 const handleNumberDisplay = function (number) {
   if (currentValue.length >= 5) return;
   if (number === '.' && currentValue.includes('.')) return;
   currentValue += number;
   inputField.value = currentValue;
 };
+
+btnNumbersEl.forEach((btn) =>
+  btn.addEventListener('click', (e) =>
+    handleNumberDisplay(e.target.textContent)
+  )
+);
