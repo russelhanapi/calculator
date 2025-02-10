@@ -43,6 +43,12 @@ const handleOperator = function (op) {
   inputField.value = previousValue;
 };
 
+btnNumbersEl.forEach((btn) =>
+  btn.addEventListener('click', (e) =>
+    handleNumberDisplay(e.target.textContent)
+  )
+);
+
 btnOperatorsEl.forEach((btn) =>
   btn.addEventListener('click', (e) => handleOperator(e.target.dataset.value))
 );
