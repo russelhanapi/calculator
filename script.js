@@ -1,5 +1,11 @@
 'user strict';
 
+const inputField = document.querySelector('.input');
+const btnNumbersEl = document.querySelectorAll('.btn-number');
+const btnOperatorsEl = document.querySelectorAll('.btn-operator');
+const btnEqualsEl = document.querySelector('[data-equals]');
+const btnClearEl = document.querySelector('[data-clear]');
+
 const add = (a, b) => a + b;
 const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
