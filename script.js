@@ -28,8 +28,21 @@ const handleNumberDisplay = function (number) {
   inputField.value = currentValue;
 };
 
-btnNumbersEl.forEach((btn) =>
-  btn.addEventListener('click', (e) =>
-    handleNumberDisplay(e.target.textContent)
-  )
+const handleOperator = function (op) {
+  if (!currentValue) return;
+  if (previousValue && operator)
+    previousValue = operate(
+      operator,
+      Number(previousValue),
+      Number(currentValue)
+    );
+
+  operator = op;
+  previousValue = currentValue;
+  currentValue = '';
+  inputField.value = previousValue;
+};
+
+btnOperatorsEl.forEach((btn) =>
+  btn.addEventListener('click', (e) => handleOperator(e.target.dataset.value))
 );
